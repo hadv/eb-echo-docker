@@ -7,11 +7,12 @@ ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
 
 # go get all of the dependencies
-RUN go get github.com/labstack/echo
-RUN go get github.com/labstack/echo/engine/standard
+RUN go get github.com/tools/godep
 
 # Set up app
-ADD . /app
+ADD . /go/src/github.com/hadv/eb-echo-docker
+WORKDIR /go/src/github.com/hadv/eb-echo-docker
+RUN godep go build -v
 
 EXPOSE 3000
 
