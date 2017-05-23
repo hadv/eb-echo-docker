@@ -1,4 +1,4 @@
-![](https://circleci.com/gh/hadv/eb-echo-docker.png?circle-token=eb22d9306cf6f2ae4b761e3e3f23a6877811ffc8) [![Go Report Card](https://goreportcard.com/badge/github.com/hadv/eb-echo-docker)](https://goreportcard.com/report/github.com/hadv/eb-echo-docker)
+[![CircleCI](https://circleci.com/gh/hadv/lumen-boilerplate.svg?style=svg)](https://circleci.com/gh/hadv/lumen-boilerplate) [![Go Report Card](https://goreportcard.com/badge/github.com/hadv/eb-echo-docker)](https://goreportcard.com/report/github.com/hadv/eb-echo-docker)
 
 # eb-echo-docker
 
