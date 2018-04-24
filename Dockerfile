@@ -1,4 +1,4 @@
-FROM golang:1.7
+FROM golang:1.8
 MAINTAINER Tony Dang
 
 # Set GOPATH/GOROOT environment variables
@@ -7,13 +7,14 @@ ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
 
 # go get all of the dependencies
-RUN go get github.com/tools/godep
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 # Set up app
-ADD . /go/src/github.com/hadv/eb-echo-docker
 WORKDIR /go/src/github.com/hadv/eb-echo-docker
-RUN godep go build -v
+ADD . .
+RUN dep ensure
+RUN go build -v
 
 EXPOSE 3000
 
-CMD ["go", "run", "/app/server.go"]
+CMD ["./eb-echo-docker"]
