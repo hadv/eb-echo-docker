@@ -24,3 +24,10 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+vendor
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
